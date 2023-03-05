@@ -1,0 +1,1 @@
+wget https://www.mysqltutorial.org/wp-content/uploads/2018/03/mysqlsampledatabase.zip
