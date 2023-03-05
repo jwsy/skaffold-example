@@ -51,17 +51,20 @@ Note that as of Feb 2023, Skaffold doesn't seem to support go 1.20 so we use go 
 Get set up with in the `helm-deployment/` directory
 
 1. Install Skaffold, configure it for a local cluster `skaffold  config set --global local-cluster true`
-2. Install go locally `brew install go`
-3. Install Go VS Code Extension
-4. Install required modules like `dlv`, use cmd-shift-p to get the modules
-5. Install the app dependencies
+2. Install go locally `brew install go`, and it's OK to have go 1.20 
+3. Install Go VS Code Extension and install required modules like `dlv`, use cmd-shift-p to get the modules
+4. Install the app dependencies
     ```bash
     go get github.com/gofiber/fiber/v2
     go get github.com/go-sql-driver/mysql
     go mod download
     go mod tidy
     ```
-
+5. Set your go working directory to be `helm-deployment`, note that this step has already been done and `go.work` is checked in.
+    ```bash
+    go work init
+    go work use helm-deployment 
+    ```
 6. Use `skaffold debug --port-forward` to debug, using `.vscode/launch.json` as shown below. The magic appeared to be to not set the `cwd`
     ```json
     {

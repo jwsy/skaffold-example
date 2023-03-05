@@ -12,7 +12,7 @@ import (
 func main() {
 
 	// Establish DB connection
-	db, err := sql.Open("mysql", "root:root@tcp(mysql:3306)")
+	db, err := sql.Open("mysql", "root:root@tcp(mysql:3306)/classicmodels")
 	if err != nil {
 		fmt.Println("ERROR:", err)
 		log.Fatal(err)
