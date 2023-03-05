@@ -42,9 +42,9 @@
         ```
 
 ## Simple API `helm-deployment/`
-Use Skaffold to create a simple client that connects to the database that you can debug. Read the README in the `helm-deployment` directory.
+Use Skaffold to create a simple client that connects to the database that you can debug, based off of the official Skaffold examples: https://github.com/GoogleContainerTools/skaffold/tree/bcbdfe043c2f334f919fa2e6ae06aed4a7578486/examples/helm-deployment. Read the README in the `helm-deployment` directory 
 
-Note that Skaffold doesn't seem to support go 1.20 so we use go 1.19 by using
+Note that as of Feb 2023, Skaffold doesn't seem to support go 1.20 so we use go 1.19 by using
 * **go 1.19** in `go.mod` and 
 * **golang:1.19-alpine3.17** in the container images in `Dockerfile` 
 
