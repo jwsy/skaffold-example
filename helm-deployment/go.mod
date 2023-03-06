@@ -1,4 +1,5 @@
-module github.com/GoogleContainerTools/skaffold/examples/helm-deployment
+// module github.com/GoogleContainerTools/skaffold/examples/helm-deployment
+module helm-deployment
 
 go 1.19
 
